@@ -13,7 +13,7 @@ const News = (props) => {
   const capatilizeText = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
-  // document.title = `${capatilizeText(props.category)}- NewsDog`;
+  // document.title = `${capatilizeText(props.category)}- OurNews`;
 
   const updateNews = async() => {
     props.setProgress(10);
@@ -44,7 +44,7 @@ const News = (props) => {
     return (
       <>
         <h1 className="text-center" style={{ margin: "35px 0px" }}>
-          NewsDog -Top {capatilizeText(props.category)} Headlines{" "}
+          OurNews -Top {capatilizeText(props.category)} Headlines{" "}
         </h1>
         {loading && <Spinner />}
         <InfiniteScroll
