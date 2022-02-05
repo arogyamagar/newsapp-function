@@ -13,7 +13,6 @@ const News = (props) => {
   const capatilizeText = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
-  // document.title = `${capatilizeText(props.category)}- OurNews`;
 
   const updateNews = async() => {
     props.setProgress(10);
@@ -30,6 +29,7 @@ const News = (props) => {
   }
 
   useEffect ( ()=>{
+    document.title = `${capatilizeText(props.category)}- OurNews`;
     updateNews();
   },[])
 
